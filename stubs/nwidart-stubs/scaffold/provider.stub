@@ -1,0 +1,25 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Illuminate\Database\Eloquent\Factory;
+use Modules\Base\Providers\BaseServiceProvider;
+
+class $CLASS$ extends BaseServiceProvider
+{
+    /**
+     * @var string $moduleName
+     */
+    protected $moduleName = '$MODULE$';
+
+    /**
+     * @var string $moduleNameLower
+     */
+    protected $moduleNameLower = '$LOWER_NAME$';
+
+    /**
+     * @var string $routeServiceProvider
+     */
+    protected $routeServiceProvider = RouteServiceProvider::class;
+
+}

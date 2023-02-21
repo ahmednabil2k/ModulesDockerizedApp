@@ -1,0 +1,11 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use Illuminate\Http\Request;
+use Modules\Base\Http\Controllers\Controller;
+
+class $CLASS$ extends Controller
+{
+
+}
