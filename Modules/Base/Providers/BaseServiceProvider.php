@@ -45,6 +45,7 @@ class BaseServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register($this->routeServiceProvider);
+        $this->app->register(ApiResponseProvider::class);
 
         // Register Modules commands
         $this->commands($this->moduleCommands());

@@ -214,10 +214,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'GitHub',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'Ahmed Nabil',
+            'email' => 'ahmed.nabil@nurinteractive.com',
         ],
         'composer-output' => false,
     ],
