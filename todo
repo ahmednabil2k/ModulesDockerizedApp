@@ -1,0 +1,17 @@
+# Auth Module
+ - Login
+ - Logout
+ - Register
+ - Forget Password
+ - Reset Password
+ - Update Password
+ - Social Login
+
+# Add Generic codebase
+
+# Use Docker
+
+# Multi Tenant
+ - Set configuration
+ - Add middlewares to config files if needed
+ - Complete the config for the package with other packages

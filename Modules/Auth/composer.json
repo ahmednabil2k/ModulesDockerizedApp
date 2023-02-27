@@ -1,0 +1,23 @@
+{
+    "name": "GitHub/auth",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ahmed Nabil",
+            "email": "ahmed.nabil@nurinteractive.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Auth\\": ""
+        }
+    }
+}

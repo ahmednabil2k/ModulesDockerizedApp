@@ -1,5 +1,6 @@
 {
     "Base": true,
     "Users": true,
-    "Roles": true
+    "Roles": true,
+    "Auth": true
 }
