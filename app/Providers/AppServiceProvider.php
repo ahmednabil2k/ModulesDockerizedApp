@@ -20,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->loadMigrationsFrom(centralMigrations());
+
         if (config('app.env') != 'local') {
             URL::forceScheme('https');
         }

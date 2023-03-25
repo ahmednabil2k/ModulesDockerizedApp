@@ -5,7 +5,6 @@ namespace Modules\Base\Providers;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Modules\Facades\Module;
 
 class BaseServiceProvider extends ServiceProvider
 {
@@ -34,7 +33,7 @@ class BaseServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
-        $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
+        $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations/Tenant'));
     }
 
     /**
@@ -45,10 +44,6 @@ class BaseServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register($this->routeServiceProvider);
-
-        if (!$this->app->bound(ApiResponseProvider::class)) {
-            $this->app->singleton(ApiResponseProvider::class);
-        }
 
         // Register Modules commands
         $this->commands($this->moduleCommands());
@@ -128,11 +123,11 @@ class BaseServiceProvider extends ServiceProvider
 
     protected function moduleCommands(): array
     {
-        $modules = Module::all();
+        $modules = activeModules();
         $commands = [];
         $prefix = "\\Modules";
 
-        foreach ($modules as $moduleName => $module) {
+        foreach ($modules as $moduleName) {
             $path = module_path($moduleName, 'Console');
             $files = File::allFiles($path);
 
