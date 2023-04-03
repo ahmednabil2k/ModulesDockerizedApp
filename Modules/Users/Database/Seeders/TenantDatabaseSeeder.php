@@ -21,7 +21,7 @@ class TenantDatabaseSeeder extends Seeder
         Model::unguard();
 
         $faker = new Factory();
-        $name = Str::slug($faker::create()->name('male'));
+        $name = Str::snake($faker::create()->name('male'));
 
         $tenant = Tenant::create([
             'id' => $name

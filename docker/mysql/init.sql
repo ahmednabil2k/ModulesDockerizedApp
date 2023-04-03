@@ -1,0 +1,3 @@
+CREATE USER 'ahmed4k'@'%' IDENTIFIED BY 'pass4k';
+GRANT ALL PRIVILEGES ON *.* TO 'ahmed4k'@'%';
+FLUSH PRIVILEGES;
