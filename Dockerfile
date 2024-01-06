@@ -71,7 +71,7 @@ RUN chown -R www-data:www-data /var/www
 # Configure Opcache
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 COPY ./docker/php/opcache.ini "$PHP_INI_DIR/conf.d/opcache.ini"
-#COPY ./docker/php/php.ini "$PHP_INI_DIR/php.ini"
+COPY ./docker/php/php.ini "$PHP_INI_DIR/php.ini"
 
 COPY ./docker/php/supervisord.conf /etc/supervisord.conf
 COPY ./docker/php/entrypoint.sh /usr/bin/entrypoint.sh
